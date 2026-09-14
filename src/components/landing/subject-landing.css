@@ -1,0 +1,220 @@
+.subject-landing {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 3rem 1.5rem;
+  gap: 1.5rem;
+}
+
+.subject-back {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  padding: 0.5rem 0.75rem;
+}
+.subject-back:hover {
+  opacity: 1;
+}
+.subject-back:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.subject-hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subject-name {
+  font-size: clamp(3rem, 10vw, 6rem);
+  margin: 0;
+  line-height: 1;
+}
+
+.subject-tagline {
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  margin: 0.75rem 0 2rem;
+}
+
+.subject-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.subject-btn {
+  padding: 0.85rem 1.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.subject-btn:hover {
+  transform: translateY(-2px);
+}
+.subject-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.subject-btn--primary {
+  background: var(--accent);
+  color: var(--btn-primary-text, #fff);
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+.subject-btn--primary:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+.subject-btn--secondary {
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+}
+
+/* Feature cards */
+.subject-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 600px;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.feature-card {
+  padding: 1.25rem 1rem;
+  border-radius: 12px;
+  border: 1px solid;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.feature-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.feature-desc {
+  font-size: 0.75rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.subject-footer {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  margin-top: 0.5rem;
+}
+
+/* --- Chemistry: cyberpunk grid + scanlines --- */
+.subject-landing--chemistry {
+  background-image:
+    linear-gradient(rgba(0, 240, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.subject-landing--chemistry::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15) 0px,
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+}
+.subject-landing--chemistry .subject-btn--primary {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+.subject-landing--chemistry .feature-card {
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.08);
+}
+
+/* --- Maths: whiteboard grid --- */
+.subject-landing--maths {
+  background-image:
+    linear-gradient(rgba(46, 94, 170, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46, 94, 170, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.subject-landing--maths .subject-btn--secondary {
+  border-style: dashed;
+}
+
+/* --- Physics: notebook lines --- */
+.subject-landing--physics {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 34px,
+    rgba(30, 70, 32, 0.15) 35px
+  );
+}
+.subject-landing--physics .subject-name {
+  transform: rotate(-1.5deg);
+  display: inline-block;
+}
+
+@media (max-width: 640px) {
+  .subject-landing {
+    padding: 4rem 1rem 2rem;
+  }
+  .subject-features {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+  .subject-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+  .subject-btn {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .subject-btn:hover,
+  .feature-card:hover {
+    transform: none;
+  }
+}

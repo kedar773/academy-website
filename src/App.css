@@ -1,0 +1,14 @@
+.app-root {
+  width: 100%;
+  min-height: 100dvh;
+  min-height: 100vh; /* fallback for older browsers */
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-root {
+    transition: none;
+  }
+}

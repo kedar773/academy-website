@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO & Open Graph -->
+    <title>Kedar's Academy — Chemistry, Maths &amp; Physics Portal for Class 11 &amp; 12</title>
+    <meta name="description" content="Your gateway to interactive Chemistry, Maths, and Physics study apps for CBSE Class 11 & 12 by Kedar's Academy. Free, open source, and built for students." />
+    <meta property="og:title" content="Kedar's Academy — Study Portal" />
+    <meta property="og:description" content="Interactive Chemistry, Maths & Physics for CBSE Class 11 & 12" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0F0F10" />
+
+    <!-- Preload critical font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" />
+    <!-- Defer non-critical display fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Share+Tech+Mono&family=Kalam:wght@400;700&family=Caveat:wght@500;700&display=swap" media="print" onload="this.media='all'" />
+  </head>
+  <body>
+    <div id="root">
+      <!-- Instant loading skeleton before React hydrates -->
+      <div style="width:100%;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#0F0F10;color:#F2A623;font-family:system-ui,sans-serif;gap:0.75rem">
+        <span style="font-size:2.5rem;font-weight:bold">⚡</span>
+        <span style="font-size:1rem;opacity:0.6;color:#A8A6A0">Loading portal...</span>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
