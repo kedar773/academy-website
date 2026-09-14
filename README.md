@@ -4,7 +4,8 @@
 
 Welcome students! This portal is your free, all-in-one gateway to interactive study apps, comprehensive chapter notes, and solved question banks for **Chemistry**, **Mathematics**, and **Physics**, curated specifically for CBSE Class 11 & 12 students.
 
-🌐 **Launch Portal**: [https://kedar773.github.io/academy-website/](https://kedar773.github.io/academy-website/)
+🌐 **Official Website**: [https://learnwithkedar.in/](https://learnwithkedar.in/)  
+*(Backup mirror: [https://kedar773.github.io/academy-website/](https://kedar773.github.io/academy-website/))*
 
 ---
 
